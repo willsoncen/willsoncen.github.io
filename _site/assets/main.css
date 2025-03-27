@@ -700,4 +700,51 @@ table td {
   margin-top: 25px;
 }
 .social-links a {
-  display: inline-
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: #0366d6;
+}
+
+.post-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+.post-card h2 {
+  margin-top: 0;
+}
+.post-card h2 a {
+  color: #333;
+  text-decoration: none;
+}
+.post-card h2 a:hover {
+  color: #0366d6;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.post-excerpt {
+  color: #555;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 800px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+}
