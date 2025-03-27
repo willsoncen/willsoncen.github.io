@@ -104,4 +104,11 @@
 
 @media screen and (max-width: 800px) {
   .layout-container {
-    grid-template-
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+}

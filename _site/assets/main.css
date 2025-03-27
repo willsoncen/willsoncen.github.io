@@ -649,7 +649,7 @@ table td {
 .layout-container {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 30px;
+  gap: 40px;
   margin-top: 30px;
 }
 
@@ -660,10 +660,14 @@ table td {
 
 .author-info {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.author-info:hover {
+  transform: translateY(-5px);
 }
 
 .author-avatar {
@@ -696,53 +700,4 @@ table td {
   margin-top: 25px;
 }
 .social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #333;
-  font-size: 1.5em;
-  transition: color 0.3s;
-}
-.social-links a:hover {
-  color: #0366d6;
-}
-
-.post-card {
-  background: white;
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-.post-card h2 {
-  margin-top: 0;
-}
-.post-card h2 a {
-  color: #333;
-  text-decoration: none;
-}
-.post-card h2 a:hover {
-  color: #0366d6;
-}
-
-.post-meta {
-  color: #666;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
-
-.post-excerpt {
-  color: #555;
-  line-height: 1.6;
-}
-
-@media screen and (max-width: 800px) {
-  .layout-container {
-    grid-template-columns: 1fr;
-  }
-  .sidebar {
-    position: static;
-    margin-bottom: 30px;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
+  display: inline-
