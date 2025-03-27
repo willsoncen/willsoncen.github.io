@@ -646,103 +646,108 @@ table td {
   color: #099;
 }
 
-.layout-container {
+.home-container {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.sidebar {
+.profile-sidebar {
   position: sticky;
-  top: 30px;
+  top: 2rem;
 }
 
-.author-info {
+.profile-card {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.author-avatar {
+.profile-avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #f0f0f0;
+  margin-bottom: 1rem;
 }
 
-.author-name {
-  margin: 15px 0;
-  font-size: 1.6em;
-  color: #333;
-}
-
-.author-bio {
+.profile-bio {
   color: #666;
-  margin: 15px 0;
-  line-height: 1.6;
-}
-
-.author-location {
-  color: #666;
-  margin: 15px 0;
-  font-size: 0.9em;
+  margin: 1rem 0;
 }
 
 .social-links {
-  margin-top: 25px;
+  margin: 1.5rem 0;
 }
 .social-links a {
-  display: inline-block;
-  margin: 0 10px;
   color: #333;
-  font-size: 1.5em;
-  transition: color 0.3s;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
 }
 .social-links a:hover {
   color: #0366d6;
 }
 
-.post-card {
-  background: white;
-  padding: 25px;
-  margin-bottom: 30px;
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.profile-tags .tag {
+  background: #f1f8ff;
+  padding: 0.3rem 0.8rem;
   border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-.post-card h2 {
-  margin-top: 0;
-}
-.post-card h2 a {
-  color: #333;
-  text-decoration: none;
-}
-.post-card h2 a:hover {
+  font-size: 0.9rem;
   color: #0366d6;
 }
 
-.post-meta {
-  color: #666;
-  font-size: 0.9em;
-  margin: 10px 0;
+.posts-list .post-item {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
 }
-
-.post-excerpt {
-  color: #555;
+.posts-list .post-item:last-child {
+  border-bottom: none;
+}
+.posts-list .post-title {
+  margin: 0 0 1rem;
+}
+.posts-list .post-title a {
+  color: #24292e;
+  text-decoration: none;
+}
+.posts-list .post-title a:hover {
+  color: #0366d6;
+}
+.posts-list .post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.posts-list .post-meta .category {
+  background: #f1f8ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+}
+.posts-list .post-excerpt {
+  color: #444;
   line-height: 1.6;
 }
 
-@media screen and (max-width: 800px) {
-  .layout-container {
+@media (max-width: 768px) {
+  .home-container {
     grid-template-columns: 1fr;
   }
-  .sidebar {
+  .profile-sidebar {
     position: static;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

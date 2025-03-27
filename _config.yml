@@ -6,6 +6,25 @@ baseurl: ""
 url: ""
 github_username: willsoncen
 
+# 添加个人信息
+author:
+  name: Willson Cen
+  bio: Full Stack Developer | Open Source Enthusiast
+  location: China
+  avatar: /assets/images/avatar.jpg
+  social:
+    github: willsoncen
+    twitter: willsoncen
+    linkedin: willsoncen
+
+# 显示设置
+show_excerpts: true
+show_author: true
+header_pages:
+  - about.md
+  - projects.md
+  - categories.md
+
 theme: minima
 plugins:
   - jekyll-feed
