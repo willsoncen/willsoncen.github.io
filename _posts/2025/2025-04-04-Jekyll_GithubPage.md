@@ -1,3 +1,10 @@
+---
+layout: post
+title: Jekyll_GithubPage
+category: design pattern
+tags: [Jekyll, GithubPage]
+---
+
 # Jekyll+GithubPage
 
 # 一、先安装环境（ubuntu）
