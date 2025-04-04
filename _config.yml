@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: I am Chuan !
-name: DONGChuan
-email: dongchuan55@gmail.com
-location: Nice, France
-company: Gfi Informatique
-company_url: http://www.gfi.fr/en/
-github_url: https://github.com/DONGChuan
-description: This is personnel website of DONG Chuan
+title: I am Willson !
+name: Willsoncen
+email: willsoncen290@gmail.com
+location: Dalian, Liaoning,China
+company: Dalian University
+company_url: https://dlu.edu.cn/
+github_url: https://github.com/willsoncen
+description: This is personnel website of Willsoncen
 favicon: favicon.png # Image must be in assets/images
 
-url: http://dongchuan.github.io # the base hostname & protocol for your site
+url: http://willsoncen.github.io # the base hostname & protocol for your site
 
 ## Gem
 gems:
