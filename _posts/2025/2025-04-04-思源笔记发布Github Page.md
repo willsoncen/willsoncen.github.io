@@ -1,13 +1,13 @@
 ---
 layout: post
-category: uncategorized
+category: 计算机
 title: 思源笔记发布Github Page
 tags: [计算机,ubuntu]
 ---
 
 # 思源笔记发布Github Page
 
-　　​`前提：`​你已经拥有了一个GitHub page的个人网站，并且你的操作系统是ubuntu
+​`前提：`​你已经拥有了一个GitHub page的个人网站，并且你的操作系统是ubuntu
 
 # 一、修改思源笔记的导出选项，自动添加元元素
 
@@ -29,35 +29,29 @@ tags: [计算机,ubuntu]
 # 配置
 source_dir="/home/willson/下载"
 target_dir="/home/video/repo/willsoncen.github/_posts/2025"
-# repo_path="/home/video/repo/willsoncen.github" # 如果需要 Git 操作，请取消注释并设置路径
 default_layout="post"
 default_category="uncategorized"
 log_file="/home/willson/md_processor.log"
 
-# 确保目标目录存在
 mkdir -p "$target_dir"
 
-# 检查是否为非交互模式
 interactive=1
 if [[ "$1" == "--no-interact" ]]; then
   interactive=0
 fi
 
-# 检查 zenity 是否可用（用于 GUI 交互）
-if ! command -v zenity &> /dev/null && [[ $interactive -eq 1 ]]; then
-  echo "$(date): zenity not found, falling back to non-interactive mode" >> "$log_file"
-  interactive=0
-fi
-
-# 日志函数
 log() {
   echo "$(date): $1" >> "$log_file"
 }
 
-# 使用 inotifywait 监控目录
 if ! command -v inotifywait &> /dev/null; then
   log "inotifywait not found, please install inotify-tools"
   exit 1
+fi
+
+if ! command -v zenity &> /dev/null && [[ $interactive -eq 1 ]]; then
+  log "zenity not found, falling back to non-interactive mode"
+  interactive=0
 fi
 
 log "Starting Markdown processor service"
@@ -95,13 +89,15 @@ inotifywait -m "$source_dir" -e create -e moved_to |
           IFS=$'
 ' read -r -d '' -a metadata_lines <<< "$metadata_block"
 
-          # 设置 category
           if [[ $interactive -eq 1 ]]; then
             category=$(zenity --entry \
               --title="Markdown Processor" \
               --text="Enter category for $new_filename (default: $default_category)" \
-              --entry-text="$default_category")
-            if [[ -z "$category" ]]; then
+              --entry-text="$default_category" 2>> "$log_file")
+            if [[ $? -ne 0 ]]; then
+              log "zenity failed to run, falling back to default category"
+              category="$default_category"
+            elif [[ -z "$category" ]]; then
               category="$default_category"
             fi
           else
@@ -140,7 +136,7 @@ $content" > "$new_path"; then
   done
 ```
 
-　　‍
+‍
 
 # 三、开机自启（使用 systemd）
 
