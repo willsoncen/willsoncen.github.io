@@ -1,7 +1,7 @@
 ---
+layout: post
+category: 计算机
 title: 思源笔记发布Github Page
-date: 2025-04-04T17:12:39Z
-lastmod: 2025-04-04T17:16:26Z
 tags: [计算机,ubuntu]
 ---
 
@@ -56,7 +56,8 @@ date: ${sy_date:-$(date +"%Y-%m-%d")}
       content=$(sed '/^---$/,/^---$/!p' "$md_file")
 
       # 写入新的带有 Jekyll 元数据的 Markdown 文件
-      echo -e "$jekyll_metadata\n$content" > "$new_path"
+      echo -e "$jekyll_metadata
+$content" > "$new_path"
 
       # Git 操作
       #cd "$repo_path"
