@@ -1,7 +1,7 @@
 ---
 title: 思源笔记->Github Page
 date: 2025-04-04T17:12:39Z
-lastmod: 2025-04-04T18:03:40Z
+lastmod: 2025-04-04T18:01:53Z
 tags: [计算机,ubuntu]
 ---
 
@@ -10,7 +10,6 @@ tags: [计算机,ubuntu]
 　　​`前提：`​你已经拥有了一个GitHub page的个人网站，并且你的操作系统是ubuntu
 
 # 一、修改思源笔记的导出选项，自动添加元元素
-​　　‍
 
 # 二、编写ubuntu的bash文件进行md文件的转移
 
