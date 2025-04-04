@@ -1,45 +1,15 @@
 ---
-layout: post
-category: uncategorized
 title: 思源笔记发布Github Page
-date: 
-lastmod: 2025-04-04T18:37:55Z
+date: 2025-04-04T17:12:39Z
+lastmod: 2025-04-04T17:16:26Z
 tags: [计算机,ubuntu]
 ---
----
-"
-
-      # 读取 Markdown 文件内容（跳过思源笔记的元数据块）
-      content=$(sed '/^---$/,/^---$/!p' "$md_file")
-
-      # 写入新的带有 Jekyll 元数据的 Markdown 文件
-      echo -e "$jekyll_metadata
-$content" > "$new_path"
-
-      # Git 操作
-      #cd "$repo_path"
-      #git add "$new_path"
-      #git commit -m "Add new post: ${sy_title}"
-      #git push origin main
-
-      echo "Processed: ${new_filename}"
-      rm "$md_file" # 删除原始的思源笔记导出的 Markdown 文件
-    fi
-    rm "$new_zip"
-  fi
-  sleep 60
-done
-```
 
 # 思源笔记发布Github Page
 
 　　​`前提：`​你已经拥有了一个GitHub page的个人网站，并且你的操作系统是ubuntu
 
 # 一、修改思源笔记的导出选项，自动添加元元素
-
-​![image](assets/image-20250404171626-m6yy65b.png)​
-
-　　‍
 
 # 二、编写ubuntu的bash文件进行md文件的转移
 
@@ -79,3 +49,26 @@ layout: ${default_layout}
 title: ${sy_title}
 tags: [${sy_tags}]
 date: ${sy_date:-$(date +"%Y-%m-%d")}
+---
+"
+
+      # 读取 Markdown 文件内容（跳过思源笔记的元数据块）
+      content=$(sed '/^---$/,/^---$/!p' "$md_file")
+
+      # 写入新的带有 Jekyll 元数据的 Markdown 文件
+      echo -e "$jekyll_metadata\n$content" > "$new_path"
+
+      # Git 操作
+      #cd "$repo_path"
+      #git add "$new_path"
+      #git commit -m "Add new post: ${sy_title}"
+      #git push origin main
+
+      echo "Processed: ${new_filename}"
+      rm "$md_file" # 删除原始的思源笔记导出的 Markdown 文件
+    fi
+    rm "$new_zip"
+  fi
+  sleep 60
+done
+```
