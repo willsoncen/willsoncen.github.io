@@ -1,9 +1,12 @@
 ---
 layout: post
+category: uncategorized
 title: 思源笔记发布Github Page
+date: 
+lastmod: 2025-04-04T18:37:55Z
 tags: [计算机,ubuntu]
 ---
-
+---
 "
 
       # 读取 Markdown 文件内容（跳过思源笔记的元数据块）
