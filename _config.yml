@@ -8,7 +8,7 @@
 # Site settings
 title: I am Willson !
 name: Willsoncen
-email: willsoncen290@gmail.com
+email: willsoncen@outlook.com
 location: Dalian, Liaoning,China
 company: Dalian University
 company_url: https://dlu.edu.cn/
@@ -43,7 +43,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: httpdongchuangithubio.disqus.com
+disque: willsoncen.disqus.com
 
 # Pagination
 paginate: 10
