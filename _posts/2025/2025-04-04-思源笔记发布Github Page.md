@@ -1,15 +1,19 @@
 ---
-title: 思源笔记->Github Page
+title: 思源笔记发布Github Page
 date: 2025-04-04T17:12:39Z
-lastmod: 2025-04-04T18:01:53Z
+lastmod: 2025-04-04T18:26:50Z
 tags: [计算机,ubuntu]
 ---
 
-# 思源笔记->Github Page
+# 思源笔记发布Github Page
 
 　　​`前提：`​你已经拥有了一个GitHub page的个人网站，并且你的操作系统是ubuntu
 
 # 一、修改思源笔记的导出选项，自动添加元元素
+
+​![image](assets/image-20250404171626-m6yy65b.png)​
+
+　　‍
 
 # 二、编写ubuntu的bash文件进行md文件的转移
 
